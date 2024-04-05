@@ -8,8 +8,7 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <span onClick={() => value.setShowSavedList(!value.showSavedList)}>
-        Saved Posts: {/* show length of saved posts here */
-            value.savedPosts.length}
+        Saved Posts: {/* show length of saved posts here */ value.savedPosts.length}
       </span>
       {value.showSavedList && (
         <div className="saved-list">

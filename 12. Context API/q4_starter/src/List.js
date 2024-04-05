@@ -2,7 +2,7 @@ import { posts } from "./data";
 import { usePostsValue } from "./postContext";
 
 export const List = () => {
-  const { savePost, savedPosts } = usePostsValue();
+  const { savePost, savedPosts, onDelete } = usePostsValue();
 
   const isPostSaved = (id) => {
     return !!savedPosts.find((p) => p.id === id);
@@ -22,7 +22,7 @@ export const List = () => {
             />
           ) : (
             // Add event listener to unsave the image here
-            <img
+            <img onClick ={()=>{onDelete(p)}}
               src="https://files.codingninjas.in/bookmark-26237.png"
               alt="delete"
             />
